@@ -8,6 +8,35 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+function fib(n) {
+    const result = [0, 1];
+    for (let i = 2; i <= n; i++) {
+        let current = result[i - 1]
+        let previous = result[i - 2]
+
+        result.push(current + previous)
+    }
+    return result[n]
+
+}
+
+fib(4)
 
 module.exports = fib;
+
+// if (n === 0) {
+//     return 0
+// } else if (n === 1) {
+//     return 1
+// }
+
+// let current = 1;
+// let previous = 0;
+// let sum = -1;
+// while (n >= 2) {
+//     sum = current + previous
+//     previous = current
+//     current = sum
+//     n -= 1
+// }
+// return sum
