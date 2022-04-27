@@ -7,6 +7,11 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+function capitalize(str) {
+    // Split string by space
+    // Map through each element and replace the first letter with cap. then concat with the rest of the string
+    const splitStr = str.split(" ")
+    return splitStr.map(word => word.slice(0,1).toUpperCase() + word.slice(1, word.length)).join(" ")
+}
 
 module.exports = capitalize;
